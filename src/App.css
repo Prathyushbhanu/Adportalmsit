@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+.split11 {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 1%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Control the left side */
+.left11 {
+  left: 0;
+  background-image: url("smiling-indian-female-student-holding-mobile-phone-EFYNPTP.jpg");
+  background-size: 100% 100%;
+  
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Control the right side */
+.right11 {
+  right: 0;
+  background: linear-gradient(to bottom right, #a2baec 45%, #5283ec 70%);
+}
+
+.admission-header{
+  font-size:3.5vw;
+  text-align:center;
+  margin-top:7%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txt1 {
+  width: 62%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.txt2 {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display:inline-block;
+  padding:1% 2%;
+  margin:3% 0.5% 0.5% 0%;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  font-size: 1.2vw;
+  color:#FFFFFF;
+  /* background-color:#e03816; */
+  background: linear-gradient(to right, #cc3314 0%, #ff4520 100%);
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  /* background-color:#8d230e; */
+  background: linear-gradient(to right, #941900 0%, #ff2a00 100%);
+  cursor:pointer;
+}
+
+.reglogforms{
+  text-align:center; 
+  margin-top: 5%; 
+}
+
+.MSIT-logo{
+  width:20%;
+  margin-top: 3%;
+  margin-left: 10%;
+  border-radius: 50%;
+  background-color: white;
+  padding:2%;
+  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+}
+
+.promotion-footer{
+  position: absolute;
+  bottom: 10%;
+  left: 6%;
+  
+}
+
+@media only screen and (max-height: 400px) {
+  /* For mobile phones: */
+  .promotion-footer {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.promotion-text1{
   color: white;
+  font-size:2.8vw;
+  margin-bottom: -10%;
 }
 
-.App-link {
-  color: #61dafb;
+.promotion-text2{
+  color: white;
+  font-size:4vw;
+  margin-bottom: 3%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.admission-footer{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  /* align-items:flex-end;  */
+
+}
+
+@media only screen and (max-height: 600px) {
+  /* For mobile phones: */
+  .admission-footer {
+    display: none;
   }
 }
+
+.admission-footer-text{
+  color: white;
+  font-size:1vw;
+}
+
+.googleplay{
+  width: 30%;
+}
+
+.error{
+  margin-left: 2%;
+  /* justify-content:flex-start */
+  /* font-size: 30%; */
+  margin-top: -1%;
+  margin-bottom: -3%;
+  color: red;
+  font-size: 70%;
+}
+
+.ajdacentErrors{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+  margin-left: 7%;
+  margin-right: 7%;
+  
+}
+
+
+
+

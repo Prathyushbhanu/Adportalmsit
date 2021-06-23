@@ -1,0 +1,59 @@
+#py{
+    padding-left: 25vh;
+    padding-bottom: 30vh;
+    position: relative;
+    width: 150vh;
+    height: 60vh;
+  
+}
+
+#pycontent{
+    color:black;
+    margin-left: -18vh;
+    background-color: white;
+    border-radius: 3vh;
+    border-color: black;
+    border-style: solid;
+    border-width:thin;
+  }
+
+  .reglogforms{
+    text-align:center;
+  }
+
+  #mp{
+      padding-left: 4vh;
+      table-layout: fixed;
+      padding-bottom: 2vh;
+      font-weight: lighter;
+
+  }
+
+#pybt{
+    background-color: #cc2a09;
+    color: white;
+    border-radius: 40vh;
+    font-weight: lighter;
+    height: 5vh;
+  }
+  
+ #pybt:hover{
+    background-color: #861a04;
+  }
+
+  #pay{
+      padding-left: 4vh;
+      font-weight: lighter;
+      font-size: 2vh;
+  }
+
+  #note{
+    border: 0.5vh solid red;
+    border-width: thin;
+    width: 65vh;
+    margin-left: 3vh;
+    border-radius: 2vh;
+    font-weight:lighter;
+    font-size: 1.7vh;
+  }
+
