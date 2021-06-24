@@ -48,14 +48,14 @@ class Walkin extends Component {
       }
       componentDidMount() {
         let result=[]
-        axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+        axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
           .then(res => {
             const persons = res.data;
             console.log(persons)
             result=persons
             this.setState({ persons });
           })
-          axios.post('http://127.0.0.1:8000/walkindetails',{email:this.state.email})
+          axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkindetails',{email:this.state.email})
       .then(res => {
         const walkin = res.data;
         console.log(walkin)
@@ -63,7 +63,7 @@ class Walkin extends Component {
         this.setState({ walkin });
       })
       let result1=[]
-      axios.post('http://127.0.0.1:8000/get_img',{email:this.state.email})
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/get_img',{email:this.state.email})
       .then(res1 => {
         const persons1 = res1.data;
         console.log(persons1["image_url"])
@@ -71,7 +71,7 @@ class Walkin extends Component {
         this.setState({ persons2: persons1["image_url"]});
       })
 
-      axios.get('http://127.0.0.1:8000/slotavailability')
+      axios.get('https://admission-portal-msit-bhanu.herokuapp.com/slotavailability')
       .then(res => {
         const AvailableSlots = res.data;
         console.log("AvailableSlots")
@@ -1134,26 +1134,26 @@ validslotTime = (person) => {
 bookSlot = () => {
   if(this.state.slotdate!=""){
     if(this.state.slottime!=""){
-      axios.post('http://127.0.0.1:8000/updatewalkinslot/', {slotdate: this.state.slotdate,
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/updatewalkinslot/', {slotdate: this.state.slotdate,
       slottime: this.state.slottime,
       slotWalkinAppNo: this.state.slotWalkinAppNo,
       slotTestcenter: this.state.slotTestcenter
     })
   
-    axios.post('http://127.0.0.1:8000/updateslotavailability/', {slotdate: this.state.slotdate,
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/updateslotavailability/', {slotdate: this.state.slotdate,
       slottime: this.state.slottime,
       slotWalkinAppNo: this.state.slotWalkinAppNo,
       slotTestcenter: this.state.slotTestcenter
     })
 
-    axios.post('http://127.0.0.1:8000/sendslotemail/', {slotdate: this.state.slotdate,
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/sendslotemail/', {slotdate: this.state.slotdate,
     slottime: this.state.slottime,
     slotWalkinAppNo: this.state.slotWalkinAppNo,
     slotTestcenter: this.state.slotTestcenter,
     email: [this.state.email]
   })
   
-    axios.post('http://127.0.0.1:8000/walkindetails',{email:this.state.email})
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkindetails',{email:this.state.email})
     .then(res => {
       const walkin = res.data;
       console.log(walkin)
@@ -1188,7 +1188,7 @@ handleClickToOpen = () => {
 handleToPay= () => {
 
   this.setState({ pay: true,apply:false});
-  axios.post('http://127.0.0.1:8000/walkinapplications/', { email: this.state.email,
+  axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkinapplications/', { email: this.state.email,
       walkinAppNo:this.state.applicationno,
     testCenter:this.state.testCenter,
     slotdate:"no",
@@ -1202,7 +1202,7 @@ handleToPay= () => {
     paymentStatus:"no"
    })
 
-   axios.post('http://127.0.0.1:8000/walkindetails',{email:this.state.email})
+   axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkindetails',{email:this.state.email})
    .then(res => {
      const walkin = res.data;
      console.log(walkin)
@@ -1218,7 +1218,7 @@ handleToLater= () => {
   console.log('PAY LATER')
   let result=[]
     
-      axios.post('http://127.0.0.1:8000/walkinapplications/', { email: this.state.email,
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkinapplications/', { email: this.state.email,
       walkinAppNo:this.state.applicationno,
     testCenter:this.state.testCenter,
     slotdate:"no",
@@ -1232,7 +1232,7 @@ handleToLater= () => {
     paymentStatus:"Pending"
    })
 
-   axios.post('http://127.0.0.1:8000/walkindetails',{email:this.state.email})
+   axios.post('https://admission-portal-msit-bhanu.herokuapp.com/walkindetails',{email:this.state.email})
       .then(res => {
         const walkin = res.data;
         console.log(walkin)

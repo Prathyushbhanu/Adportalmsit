@@ -46,7 +46,7 @@ class Gatapplication extends Component{
 
     componentDidMount() {
       let result=[]
-        axios.post('http://127.0.0.1:8000/gatdetails',{email:this.state.email})
+        axios.post('https://admission-portal-msit-bhanu.herokuapp.com/gatdetails',{email:this.state.email})
     .then(res => {
       const gat = res.data;
       console.log(gat);
@@ -54,7 +54,7 @@ class Gatapplication extends Component{
       this.setState({ gat });
     })
    
-    axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
       .then(res => {
         const persons = res.data;
         console.log(persons)
@@ -62,7 +62,7 @@ class Gatapplication extends Component{
         this.setState({ persons });
       })
       let result1=[]
-      axios.post('http://127.0.0.1:8000/get_img',{email:this.state.email})
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/get_img',{email:this.state.email})
       .then(res1 => {
         const persons1 = res1.data;
         console.log(persons1["image_url"])
@@ -151,7 +151,7 @@ class Gatapplication extends Component{
       if (this.validateexam()){
       if(this.validategre()){
       if (this.validategreanlytical()){
-      axios.post('http://127.0.0.1:8000/gatapplication',{
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/gatapplication',{
         email:this.state.email,
         applicationno:this.state.appnumber,
         testcenter:this.state.center,
@@ -196,7 +196,7 @@ class Gatapplication extends Component{
 
 
 
-        axios.post('http://127.0.0.1:8000/gatapplication',{
+        axios.post('https://admission-portal-msit-bhanu.herokuapp.com/gatapplication',{
           email:this.state.email,
           applicationno:this.state.appnumber,
           testcenter:this.state.center,
@@ -257,7 +257,7 @@ class Gatapplication extends Component{
       this.setState({paylater: !this.state.paylater})
 
       let result=[]
-      axios.post('http://127.0.0.1:8000/gatdetails',{email:this.state.email})
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/gatdetails',{email:this.state.email})
           .then(res => {
             const gat = res.data;
             console.log(gat);

@@ -42,7 +42,7 @@ class Sample extends Component {
   }
   componentDidMount() {
     let result=[]
-    axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
       .then(res => {
         const persons = res.data;
         console.log(persons)

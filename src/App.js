@@ -421,14 +421,14 @@
 //     // };
 //     // const history = useHistory();
 
-//     axios.post('http://127.0.0.1:8000/ma_users', { email: this.state.email, 
+//     axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users', { email: this.state.email, 
 //            password: this.state.password })
 //       .then(res => {
 //         // console.log(res);
 //         console.log(res.data);
 //         if(res.data===true)
 //         {
-//           axios.post('http://127.0.0.1:8000/ma_user_profile', { email: this.state.email,full_name:"",
+//           axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_user_profile', { email: this.state.email,full_name:"",
 //           gender:"",
 //           date_of_birth:"",
 //           nationality:"",
@@ -745,7 +745,7 @@ forgotSubmit = (event) => {
         this.setState({
           forgotvalidateMessage: ""
         })
-        axios.post('http://127.0.0.1:8000/ChangePassword', {  
+        axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ChangePassword', {  
           email: this.state.email, 
           salt: this.state.key, 
           password: this.state.password})
@@ -819,7 +819,7 @@ sendforgotEmail = () => {
     })
   }
   if(this.state.email !== ""){
-    axios.post('http://127.0.0.1:8000/forgotpassword', { 
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/forgotpassword', { 
       email: [this.state.email]})
       .then(response => {
         console.log(response);
@@ -887,14 +887,14 @@ updatePassword = (event) => {
     // const history = useHistory();
 
 
-    axios.post('http://127.0.0.1:8000/ma_users', { email: this.state.email, 
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users', { email: this.state.email, 
            password: this.state.password })
       .then(res => {
         // console.log(res);
         console.log(res.data);
         if(res.data===true)
         {
-          axios.post('http://127.0.0.1:8000/ma_user_profile', { email: this.state.email,full_name:"",
+          axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_user_profile', { email: this.state.email,full_name:"",
           gender:"",
           date_of_birth:"",
           nationality:"",

@@ -192,7 +192,7 @@ class Register extends Component {
       })
 
       if(typeof fields["email"] !== "undefined"){
-        axios.get('http://127.0.0.1:8000/email/' + this.state.fields["email"])
+        axios.get('https://admission-portal-msit-bhanu.herokuapp.com/email/' + this.state.fields["email"])
         .then(res => {
           console.log(res);
           console.log(res.data);
@@ -448,7 +448,7 @@ class Register extends Component {
       this.setState(
         {emailerrMessage: ""}
       );
-      axios.post('http://127.0.0.1:8000/email', { 
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/email', { 
         email: [this.state.fields["email"]]})
         .then(res => {
           console.log(res);
@@ -470,7 +470,7 @@ class Register extends Component {
         if(this.state.formIsValid) {
           if(this.handleValidation()){
             
-            axios.post('http://127.0.0.1:8000/Register', { 
+            axios.post('https://admission-portal-msit-bhanu.herokuapp.com/Register', { 
               username: this.state.fields["name"], 
               email: this.state.fields["email"], 
               phone_no: this.state.fields["contact"], 
@@ -484,7 +484,7 @@ class Register extends Component {
                   );
                 }
                 if(res.data.message==="success"){
-                  axios.post('http://127.0.0.1:8000/email', { 
+                  axios.post('https://admission-portal-msit-bhanu.herokuapp.com/email', { 
                     email: [this.state.fields["email"]]})
                     .then(response => {
                       console.log(response);

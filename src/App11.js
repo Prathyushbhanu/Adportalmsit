@@ -297,14 +297,14 @@ handleValidation(){
     if(this.state.formIsValid) {
       if(this.handleValidation()){
         
-        axios.post('http://127.0.0.1:8000/ma_users', { email: this.state.fields["email"], 
+        axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users', { email: this.state.fields["email"], 
               password: this.state.fields["password"] })
           .then(res => {
             // console.log(res);
             console.log(res.data);
             if(res.data===true)
             {
-              axios.post('http://127.0.0.1:8000/ma_user_profile', { email: this.state.fields["email"],full_name:"",
+              axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_user_profile', { email: this.state.fields["email"],full_name:"",
               gender:"",
               date_of_birth:"",
               nationality:"",

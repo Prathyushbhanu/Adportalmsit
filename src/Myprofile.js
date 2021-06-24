@@ -186,7 +186,7 @@ class Myprofile extends Component {
       // const history = useHistory();
       console.log(this.state.email)
       this.setState({ redirect: true });
-      axios.post('http://127.0.0.1:8000/ma_user_profile', { email:this.state.email,full_name:this.state.full_name,
+      axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_user_profile', { email:this.state.email,full_name:this.state.full_name,
       gender:this.state.gender,
       date_of_birth:this.state.date_of_birth,
       nationality:this.state.nationality,

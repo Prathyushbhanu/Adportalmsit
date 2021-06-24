@@ -28,7 +28,7 @@ class Template extends Component{
   }
   componentDidMount() {
     let result=[]
-    axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
       .then(res => {
         const persons = res.data;
         console.log(persons)
@@ -36,7 +36,7 @@ class Template extends Component{
         this.setState({ persons });
       })
       let result1=[]
-  axios.post('http://127.0.0.1:8000/get_img',{email:this.state.email})
+  axios.post('https://admission-portal-msit-bhanu.herokuapp.com/get_img',{email:this.state.email})
   .then(res1 => {
     const persons1 = res1.data;
     console.log(persons1["image_url"])
@@ -75,14 +75,14 @@ class Template extends Component{
   
     );
     
-    axios.post('http://127.0.0.1:8000/uploadfile/', formData,  
+    axios.post('https://admission-portal-msit-bhanu.herokuapp.com/uploadfile/', formData,  
     {
       headers: {
         'content-type': 'multipart/form-data'
       }
     }
   )
-  axios.post('http://127.0.0.1:8000/image/', {email:this.state.email,image_url:this.state.image1.name})
+  axios.post('https://admission-portal-msit-bhanu.herokuapp.com/image/', {email:this.state.email,image_url:this.state.image1.name})
   window.location.reload();
 
   };
@@ -314,7 +314,7 @@ export default Template;
 // //   }
 // //   componentDidMount() {
 // //     let result=[]
-// //     axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+// //     axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
 // //       .then(res => {
 // //         const persons = res.data;
 // //         console.log(persons)
@@ -322,7 +322,7 @@ export default Template;
 // //         this.setState({ persons });
 // //       })
 // //       let result1=[]
-// //       axios.post('http://127.0.0.1:8000/get_img',{email:this.state.email})
+// //       axios.post('https://admission-portal-msit-bhanu.herokuapp.com/get_img',{email:this.state.email})
 // //       .then(res1 => {
 // //         const persons1 = res1.data;
 // //         console.log(persons1)
@@ -378,19 +378,19 @@ export default Template;
 // //   //     body: formData
 // //   // };
 // //   // const headers={'Content-Type': 'multipart/form-data'}
-// // //   fetch('http://127.0.0.1:8000/uploadfile/', {
+// // //   fetch('https://admission-portal-msit-bhanu.herokuapp.com/uploadfile/', {
 // // //     method: 'POST',
 // // //     data: formData,
 // // //     headers: {'content-type': 'multipart/form-data'}
 // // // })
-// //     axios.post('http://127.0.0.1:8000/uploadfile/', formData,  
+// //     axios.post('https://admission-portal-msit-bhanu.herokuapp.com/uploadfile/', formData,  
 // //     {
 // //       headers: {
 // //         'content-type': 'multipart/form-data'
 // //       }
 // //     }
 // //   )
-// //   axios.post('http://127.0.0.1:8000/image/', {email:this.state.email,image_url:window.path})
+// //   axios.post('https://admission-portal-msit-bhanu.herokuapp.com/image/', {email:this.state.email,image_url:window.path})
 // //       // .then(response => response.json())
 // //       // .then(function (response) {
 // //       //   console.log('response')
@@ -415,7 +415,7 @@ export default Template;
 // //   }
 // //  render(){
 // //   let result1=[]
-// //   axios.post('http://127.0.0.1:8000/get_img',{email:this.state.email})
+// //   axios.post('https://admission-portal-msit-bhanu.herokuapp.com/get_img',{email:this.state.email})
 // //   .then(res1 => {
 // //     const persons1 = res1.data;
 // //     console.log(persons1)
@@ -553,7 +553,7 @@ export default Template;
 //   }
 //   componentDidMount() {
 //     let result=[]
-//     axios.post('http://127.0.0.1:8000/ma_users_view',{email:this.state.email})
+//     axios.post('https://admission-portal-msit-bhanu.herokuapp.com/ma_users_view',{email:this.state.email})
 //       .then(res => {
 //         const persons = res.data;
 //         console.log(persons)
@@ -585,14 +585,14 @@ export default Template;
 //   //      this.state.image1,
 //   //     this.state.image1.name
 //   //   );
-//   //   axios.post('http://127.0.0.1:8000/uploadfile/', formData,  
+//   //   axios.post('https://admission-portal-msit-bhanu.herokuapp.com/uploadfile/', formData,  
 //   //   {
 //   //     headers: {
 //   //       'content-type': 'multipart/form-data'
 //   //     }
 //   //   }
 //   // )
-//   // axios.post('http://127.0.0.1:8000/image/', {email:this.state.email,image_url:window.path})
+//   // axios.post('https://admission-portal-msit-bhanu.herokuapp.com/image/', {email:this.state.email,image_url:window.path})
 //   // };
 
   
